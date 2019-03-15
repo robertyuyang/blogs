@@ -12,5 +12,6 @@
 
 #### 翻译
 + [MVC vs. MVP vs. MVVM on Android【翻译】](/MVC%20vs.%20MVP%20vs.%20MVVM%20on%20Android.md)
++ [从STUPID到SOLID【翻译】](/从STUPID到SOLID.md)
 
 
