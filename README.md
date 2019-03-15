@@ -2,7 +2,7 @@
 
 ## 目录
 
-#### 通用规范
+#### 设计&规范
 
 + [Code Review Guide 1.0](/Code%20Review%20Guide%201.0.md)
 + [Objc Coding Guide 1.0](/Objc%20Coding%20Guide.md)
