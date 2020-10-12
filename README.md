@@ -8,6 +8,10 @@
 + [Objc Coding Guide 1.0](/Objc%20Coding%20Guide.md)
 + [MVVM（MVP） 设计要点](/MVVM（MVP）%20设计要点.md)
 
+#### 随笔
+
++ [基于vscode构建翻译集成环境.md](/基于vscode构建翻译集成环境.md)
+
 #### 翻译
 + [MVC vs. MVP vs. MVVM on Android【翻译】](/【译】MVC%20vs.%20MVP%20vs.%20MVVM%20on%20Android.md)
 + [从STUPID到SOLID【翻译】](/【译】从STUPID到SOLID.md)
