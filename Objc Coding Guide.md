@@ -126,7 +126,7 @@ extern NSString *const kCacheControllerDidClearCacheNotification;
 ```
 从编译上，这个extern的表达式不一定非要写在同一个类文件的h文件里，这个表达式只是告诉引入了这句话的编译单元，这个符号是一个外部符号，编译时可以认为这是一个合法的符号，到链接时会有这个符号的具体实现。但从设计上一般都会和这个变量的具体实现写到同一个类的h和m文件里。
 
-##### 2.4.1 枚举常量
+##### 2.3.2 枚举常量
 
 枚举常量的命名应该参考类的命名，使用前缀避免全局命名冲突，
 
@@ -209,7 +209,7 @@ IB  | Interface Builder
 
 另外，同一个项目里，相同的动作应该用相同的动词，比如从硬盘读取数据都叫load或都叫read，统一动词能减少代码阅读的成本。
 
-##### 2.5.1 参数
+##### 2.5.3 参数
 
 每个参数前都要有关键字。
 
@@ -264,7 +264,7 @@ IB  | Interface Builder
 - (void)dismissViewControllerAnimated: (BOOL)flag completion: (void (^ __nullable)(void))completion NS_AVAILABLE_IOS(5_0);
 ```
 
-##### 2.5.3 Accessor
+##### 2.5.4 Accessor
 
 accessor是用来返回和设置对象内部数据的方法（一般不经过复杂加工）。
 如果要返回的数据是个名词，则直接用数据的名词作为方法名，不要加"get"：
@@ -283,7 +283,7 @@ accessor是用来返回和设置对象内部数据的方法（一般不经过复
 
 ```
 
-##### 2.5.4 Delegate
+##### 2.5.5 Delegate
 
 delegate往往用来实现一种观察者模式，实现delegate协议的类是一个观察者，等待被观察者在数据发生变化时发送消息。
 
@@ -573,13 +573,6 @@ switch (menuType) {
           name:arg2  // aligning keywords instead of colons
           error:arg3];
 ```
-
-## 4.注释
-
-
-
-mark
-procol
 
 
 ## 4.代码组织
@@ -923,31 +916,6 @@ iOS的framework实际分两种，我们自己编写呃framework是静态库，�
 
 
 
-
-Since internal methods are not really private, it's easy to accidentally override a superclass's "private" method, thus making a very difficult bug to squash. In general, private methods should have a fairly unique name that will prevent subclasses from unintentionally overriding them.
-
-
-
-
- 
-
-
-
-
-Avoid nil pointer checks that exist only to prevent sending messages to nil. Sending a message to nil reliably returns nil as a pointer, zero as an integer or floating-point value, structs initialized to 0, and _Complex values equal to {0, 0}.
-
-
-
-
-
-
-Delegates, target objects, and block pointers should not be retained when doing so would create a retain cycle.
-
-
-
-
-
-Don’t use the underscore character as a prefix for your private methods. Apple reserves this convention.
 
 
 
